@@ -20,7 +20,7 @@ class Transfer
     end
 
     if(@status != "complete")
-      @sender.balance -= @amount
+      !@sender.balance -= @amount
       @receiver.balance += @amount
       @status = "complete"
     end
@@ -35,3 +35,4 @@ class Transfer
   end
 
 end
+
